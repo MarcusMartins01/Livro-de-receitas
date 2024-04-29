@@ -1,0 +1,24 @@
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Espaçamento igual entre os botões */
+    margin-top: 12rem;
+  }
+  
+  .submit-button {
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(160, 220, 139, 1);
+    border: none;
+    border-radius: 25px; /* Adiciona bordas arredondadas */
+    cursor: pointer;
+  }
+  .main-title {
+
+    margin-top: 3rem;
+    color: gray;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 2rem;
+  }

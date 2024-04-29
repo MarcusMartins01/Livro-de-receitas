@@ -1,0 +1,39 @@
+<form [formGroup]="myForm" (ngSubmit)="update()">
+    <div class="container">
+      <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+    <div mat-dialog-content>
+      <mat-form-field>
+        <mat-label>Nome da Receita</mat-label>
+        <input formControlName="nome" matInput readonly="true">
+      </mat-form-field>
+      <mat-form-field> 
+        <mat-label>Cozinheiro</mat-label>
+        <input formControlName="cozinheiro" matInput readonly="true">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Degustador</mat-label>
+        <input
+          matInput 
+          formControlName="degustador"
+          [matAutocomplete]="autoDegustador"
+          readonly="true"
+        >
+        <mat-autocomplete #autoDegustador="matAutocomplete">
+          <mat-option *ngFor="let funcionario of funcionarios" [value]="funcionario.nome">
+            {{ funcionario.nome }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nota da degustação</mat-label>
+        <input type="number" formControlName="notaDegustacao" matInput>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary">Atualizar</button>
+      <!-- <button (click)="closePopup()" mat-raised-button color="warn">Close</button> -->
+      <button mat-raised-button [mat-dialog-close]="closemessage" color="warn">Cancel</button>
+    </div>
+    </div>
+  </form>
+

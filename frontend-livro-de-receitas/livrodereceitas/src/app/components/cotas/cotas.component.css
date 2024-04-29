@@ -1,0 +1,73 @@
+
+.c-title {
+  margin-top: 3rem;
+  color: gray;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.calendar {
+    border: 4px solid #ccc;
+    padding: 10px;
+    width: 250px; /* Ajuste a largura conforme necessário */
+  margin-top: 100px; /* Ajuste a margem superior conforme necessário */
+  margin-right: 40px; /* Margem à direita para separar das perguntas */
+  margin-left: 30px; /* Margem à esquerda para afastar do canto esquerdo */
+  }
+  
+  .month {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .days-header {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .day {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .current-month-day {
+    background-color: #3498db;
+    color: white;
+  }
+  .statistics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px; /* Ajuste a margem superior conforme necessário */
+    margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+    width: 250px; /* Ajuste a largura conforme necessário */
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Garante que ocupe a altura da tela */
+    background-color: #f0f0f0; /* Ajuste a cor de fundo conforme necessário */
+  }
+  
+  .main-title {
+    color: gray;
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center;
+    margin: 10px 0;
+    margin-top: -80px; /* Ajuste a margem superior das perguntas */
+  }
+ 
+  
+  

@@ -1,0 +1,38 @@
+<div class="container">
+  <h1 class="main-title">Cargos</h1>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="idCargo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let cargo">{{ cargo.idCargo }}</td>
+    </ng-container>
+
+    <!-- Descricao Column -->
+    <ng-container matColumnDef="descricao">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Descricao</th>
+      <td mat-cell *matCellDef="let cargo">{{ cargo.descricao }}</td>
+    </ng-container>
+
+    <!-- Ação Column -->
+    <ng-container matColumnDef="acao">
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
+      <td mat-cell *matCellDef="let cargo">
+        <button mat-icon-button class="edit-button" (click)="editRecipe(cargo.idCargo)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button class="delete-button" (click)="deleteRecipe(cargo.idCargo)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+
+  <button mat-raised-button class="submit-button" (click)="inserirCargo()">Inserir</button>
+</div>

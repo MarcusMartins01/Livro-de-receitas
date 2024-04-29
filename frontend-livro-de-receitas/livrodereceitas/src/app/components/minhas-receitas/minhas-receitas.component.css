@@ -1,0 +1,186 @@
+.main-title {
+
+    margin-top: 3rem;
+    color: gray;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 2rem;
+} 
+
+body {
+    background-color: white; /* Defina a cor de fundo da página como branca */
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    border-radius: 10px;
+    width: 80%; /* Ajuste conforme necessário */
+    margin: auto; /* Para centralizar o container */
+  }
+  
+  /* Aplica a cor cinza apenas nos campos do formulário */
+  .form-group input,
+  .form-group textarea {
+    background-color: #908e8e41; /* Cor de fundo dos campos do formulário em cinza */
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: calc(100% - 20px); /* Ajuste para compensar a margem interna */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaçamento entre os campos */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #f9fbfb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(160, 220, 139, 1);
+  }
+  
+  
+  
+  .quantity-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 80%; /* Ajuste conforme necessário */
+    margin: auto; /* Para centralizar o container */
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: calc(100% - 20px); /* Ajuste para compensar a margem interna */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #f9fbfb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+
+  }  
+  .quantity-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-buttons .btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 90%;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .quantity-buttons .btn:focus {
+    outline: none;
+  }
+  
+  .quantity-buttons .btn::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+  
+  .quantity-value {
+    margin: 0 10px; /* Ajuste o espaçamento entre os botões e a quantidade conforme necessário */
+  }
+  
+  .quantity-buttons .btn:hover {
+    background-color: transparent;
+  }
+  
+
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Adicione margem na parte inferior para afastar o próximo conteúdo */
+  }
+  
+  .save-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .round-button {
+    width: 30%; /* Ajuste a largura conforme necessário */
+    height: 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(160, 220, 139, 1); /* Cor fixa */
+  }
+  
+  .save-button {
+    width: 100px;
+  }
+  

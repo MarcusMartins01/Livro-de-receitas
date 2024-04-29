@@ -1,0 +1,47 @@
+
+<!-- <div>
+   <h2>Login</h2>
+   <form (ngSubmit)="login(username.value, password.value)" #loginForm="ngForm">
+       <div>
+           <label for="username">Usuário:</label>
+           <input type="text" id="username" name="username" ngModel required #username="ngModel">
+       </div>
+
+       <div>
+           <label for="password">Senha:</label>
+           <input type="password" id="password" name="password" ngModel required #password="ngModel">
+       </div>
+
+       <button type="submit" [disabled]="!loginForm.valid">Entrar</button>
+   </form>
+</div> -->
+
+<mat-toolbar color="primary">
+    <span id="logo">Livro de Receitas</span>
+    <span class="fill-remaining-space"></span> </mat-toolbar>
+<mat-card class="login-card">
+    <div class="container">
+        <div class="image-container">
+            <img src="../../../assets/img/loginimage.jpeg" alt="Imagem" class="logo-image">
+        </div>
+        <div class="form-container">
+            <div class="login-heading">
+                <h2>Login</h2>
+            </div>
+            <form (ngSubmit)="login(username.value, password.value)" #loginForm="ngForm">
+                <mat-form-field>
+                    <label for="username">Usuário:</label>
+                    <input matInput type="text" id="username" name="username" ngModel required #username="ngModel">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <label for="password">Senha:</label>
+                    <input matInput type="password" id="password" name="password" ngModel required #password="ngModel">
+                </mat-form-field>
+
+                <button mat-raised-button type="submit" [disabled]="!loginForm.valid"
+                    style="color: white;">Entrar</button>
+            </form>
+        </div>
+    </div>
+</mat-card>

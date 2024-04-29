@@ -1,0 +1,54 @@
+
+<form [formGroup]="myForm" (ngSubmit)="atualizar()">
+  <div class="container">
+    <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+  <div mat-dialog-content>
+      <input formControlName="idFuncionario" type="hidden">
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input formControlName="nome" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>RG</mat-label>
+      <input formControlName="rg" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Salário</mat-label>
+      <input formControlName="salario" matInput>
+    </mat-form-field> 
+    <mat-form-field>
+      <mat-label>Cargo</mat-label>
+      <input
+        matInput 
+        formControlName="cargo"
+        [matAutocomplete]="autoCargo" 
+      >
+      <mat-autocomplete #autoCargo="matAutocomplete" (optionSelected)="selecionarCargo($event)">
+        <mat-option *ngFor="let cargo of cargos" [value]="cargo.descricao">
+          {{ cargo.descricao }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Nome Fantasia</mat-label>
+      <input formControlName="nomeFantasia" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Usuário</mat-label>
+      <input formControlName="usuario" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="ATIVO">ATIVO</mat-option>
+        <mat-option value="NAO_ATIVO">NAO_ATIVO</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary">Atualizar</button>
+    <!-- <button (click)="closePopup()" mat-raised-button color="warn">Close</button> -->
+    <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button>
+  </div>
+  </div>
+</form>

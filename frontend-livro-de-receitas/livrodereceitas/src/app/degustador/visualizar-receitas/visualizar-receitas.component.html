@@ -1,0 +1,80 @@
+<div class="conteiner">
+    <h1 class="main-title">Visualizar Degustações</h1>
+  
+    <table mat-table [dataSource]="degustacao" class="mat-elevation-z8">
+      <ng-container matColumnDef="degustador">
+        <th mat-header-cell *matHeaderCellDef>Degustador</th>
+        <td mat-cell *matCellDef="let degustacao">
+          {{
+            degustacao.id &&
+              degustacao.id.funcionario &&
+              degustacao.id.funcionario.nome
+          }}
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>Nome da Receita</th>
+        <td mat-cell *matCellDef="let degustacao">
+          {{
+            degustacao.id &&
+              degustacao.id.receita &&
+              degustacao.id.receita.id.nome
+          }}
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="cozinheiro">
+        <th mat-header-cell *matHeaderCellDef>Cozinheiro</th>
+        <td mat-cell *matCellDef="let degustacao">
+          {{
+            degustacao.id &&
+              degustacao.id.receita &&
+              degustacao.id.receita.id.funcionario &&
+              degustacao.id.receita.id.funcionario.nome
+          }}
+        </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="dataDegustacao">
+        <th mat-header-cell *matHeaderCellDef>Data_Degustacão</th>
+        <td mat-cell *matCellDef="let degustacao">
+          {{ degustacao.dataDegustacao }}
+        </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="notaDegustacao">
+        <th mat-header-cell *matHeaderCellDef>Nota_Degustacão</th>
+        <td mat-cell *matCellDef="let degustacao">
+          {{ degustacao.notaDegustacao }}
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="acao">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let degustacao">
+          <button
+            mat-icon-button
+            class="edit-button"
+            (click)="editRecipe(degustacao.id && degustacao.id.funcionario.idFuncionario, degustacao.id && degustacao.id.receita.id.nome, degustacao.id && degustacao.id.receita.id.funcionario.idFuncionario)"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+  
+          <button
+            mat-icon-button
+            class="delete-button"
+            (click)="deleteRecipe(degustacao.id && degustacao.id.funcionario.idFuncionario, degustacao.id && degustacao.id.receita.id.nome, degustacao.id && degustacao.id.receita.id.funcionario.idFuncionario)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+

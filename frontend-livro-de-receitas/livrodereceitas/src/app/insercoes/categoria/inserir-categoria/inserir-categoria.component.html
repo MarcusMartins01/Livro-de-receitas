@@ -1,0 +1,16 @@
+<form [formGroup]="myForm" (ngSubmit)="create()">
+    <div class="container">
+      <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+    <div mat-dialog-content>
+      <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <input formControlName="descricao" matInput>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary">Cadastrar</button>
+      <!-- <button (click)="closePopup()" mat-raised-button color="warn">Close</button> -->
+      <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button>
+    </div>
+    </div>
+  </form>

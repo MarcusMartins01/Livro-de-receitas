@@ -1,0 +1,67 @@
+.conteiner {
+  width: calc(100% - 60px); 
+  margin-top: auto;
+  margin-left: 30px; /* Margem à esquerda de 10px */
+}
+
+
+.main-title {
+
+  margin-top: 3rem;
+  color: gray;
+  text-align: center;
+  font-weight: bold; 
+  font-size: 2rem;
+}
+.container {
+margin: 20px; 
+}
+
+.mat-elevation-z8 {
+width: calc(100% - 20px); 
+margin-bottom: 20px; 
+}
+
+.mat-paginator {
+width: calc(100% - 20px); 
+margin-top: 20px; 
+}
+
+.submit-button {
+margin-top: 20px; 
+}
+
+.mat-icon-button {
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+}
+
+.mat-icon-button + .mat-icon-button {
+  margin-left: 4px;
+}
+.mat-icon-button.edit-button .mat-icon {
+  color: black; /* Cor preta para o ícone "lapis" */
+}
+
+/* Estilo para o ícone "lixeira" nos botões de exclusão */
+.mat-icon-button.delete-button .mat-icon {
+  color: black; /* Cor preta para o ícone "lixeira" */
+}
+.submit-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: #395ea3;
+  border: none;
+  border-radius: 25px; /* Adiciona bordas arredondadas */
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.submit-button:hover {
+  background-color: #2569e9;
+}

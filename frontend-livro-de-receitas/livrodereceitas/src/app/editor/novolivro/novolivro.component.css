@@ -1,0 +1,129 @@
+.main-title {
+
+    margin-top: 3rem;
+    color: gray;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 2rem;
+} 
+
+body {
+    background-color: white; /* Defina a cor de fundo da página como branca */
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    border-radius: 10px;
+    width: 80%; /* Ajuste conforme necessário */
+    margin: auto; /* Para centralizar o container */
+  }
+  
+  /* Aplica a cor cinza apenas nos campos do formulário */
+  .form-group input,
+  .form-group textarea {
+    background-color: #908e8e41; /* Cor de fundo dos campos do formulário em cinza */
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: calc(100% - 20px); /* Ajuste para compensar a margem interna */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaçamento entre os campos */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #f9fbfb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(160, 220, 139, 1);
+  }
+  
+  
+  
+  .quantity-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 80%; /* Ajuste conforme necessário */
+    margin: auto; /* Para centralizar o container */
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: calc(100% - 20px); /* Ajuste para compensar a margem interna */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+  }
+  
+  .submit-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(160, 220, 139, 1);
+    border: none;
+    border-radius: 25px; /* Adiciona bordas arredondadas */
+    cursor: pointer;
+    margin-top: 5rem;
+  }
+
+
+  
+
+  
+
+  
+

@@ -1,0 +1,85 @@
+<h1 class="main-title"> Receitas</h1>
+
+<div class="container">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="cozinheiro">Cozinheiro:</label>
+        <input type="text" id="cozinheiro" name="cozinheiro" placeholder="Digite o nome do cozinheiro">
+      </div>
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome da receita">
+      </div>
+      <div class="form-group">
+        <label for="dataCriacao">Data da criação:</label>
+        <input type="date" id="dataCriacao" name="dataCriacao">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" placeholder="Digite a categoria">
+      </div>
+      <div class="form-group">
+        <label for="modoPreparo">Modo de Preparo:</label>
+        <textarea id="modoPreparo" name="modoPreparo" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="porcoes">Porções:</label>
+        <input type="number" id="porcoes" name="porcoes" placeholder="Digite o número de porções">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+
+
+    <label for="ingredientes">Ingredientes:</label>
+  <select id="ingredientes" name="ingredientes">
+    <option value="ingrediente1">Farinha de trigo</option>
+    <option value="ingrediente2">Açúcar</option>
+    <option value="ingrediente3">Ovos</option>
+    <option value="ingrediente4">Leite</option>
+    <option value="ingrediente5">Chocolate</option>
+    <option value="ingrediente6">Sal</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="medida">Medida:</label>
+        <select id="medida" name="medida">
+          <option value="unidade">Unidade</option>
+          <option value="gramas">Gramas</option>
+          <option value="mililitros">Litros</option>
+          <option value="colher">Colher</option>
+
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <div class="quantity-buttons">
+              <button (click)="changeQuantity(-1)">-</button>
+              <span id="quantidade-display">{{ quantidade }}</span>
+              <button (click)="changeQuantity(1)">+</button>
+            </div>
+            <router-outlet></router-outlet>
+
+          </div>
+          
+
+        </div>
+        <div class="button-container">
+            <button class="round-button green-bg">Inserir Ingrediente</button>
+            <button class="round-button green-bg">Inserir Medida</button>
+            <button class="round-button green-bg">Inserir Imagem</button>
+          </div>
+          <div class="save-button-container">
+           
+         <button class="round-button green-bg save-button">Salvar</button>
+
+        </div>
+          
+  

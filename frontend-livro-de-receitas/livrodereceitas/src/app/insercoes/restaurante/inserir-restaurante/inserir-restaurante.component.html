@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Cadastro de Restaurante</h1>
+  
+    <form (submit)="create()">
+      <div class="input-box">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="restaurante.nome" required>
+      </div>
+      
+      <div class="input-box">
+        <label for="contato">Contato</label>
+        <input type="tel" id="contato" name="contato" [(ngModel)]="restaurante.contato" required>
+      </div>
+
+      <button type="submit" class="btn">Cadastrar Restaurante</button>
+    </form>
+  </div>
+</body>
+</html>
+   -->
+
+   <form [formGroup]="myForm" (ngSubmit)="create()">
+    <div class="container">
+      <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+    <div mat-dialog-content>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input formControlName="nome" matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Contato</mat-label>
+        <input formControlName="contato" matInput>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary">Cadastrar</button>
+      <!-- <button (click)="closePopup()" mat-raised-button color="warn">Close</button> -->
+      <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button>
+    </div>
+    </div>
+  </form>

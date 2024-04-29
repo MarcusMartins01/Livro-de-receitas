@@ -1,0 +1,116 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper"> 
+    <h1>Cadastro de Receita</h1>
+    <form (ngSubmit)="criarReceita()">
+      <div class="input-box">
+        <label for="nomeReceita">Nome da Receita:</label>
+        <input type="text" id="nomeReceita" name="nomeReceita" [(ngModel)]="novaReceitaPk.nome" required />
+      </div>
+      
+      <div class="input-box">
+        <label for="idFuncionario">Funcionário:</label>
+        <input type="number" id="idFuncionario" name="idFuncionario" [(ngModel)]="funcionarios.idFuncionario" required>
+      </div>
+  
+      <div class="input-box">
+        <label for="categoria">Categoria:</label>
+        <input type="number" id="categoria" name="categoria" [(ngModel)]="novaReceita.categoria" required>
+      </div>
+  
+      <div class="input-box">
+        <label for="modoPreparo">Modo de Preparo:</label>
+        <textarea type="text" id="modoPreparo" name="modoPreparo" [(ngModel)]="novaReceita.modoPreparo" required></textarea>
+      </div>
+  
+      <div class="input-box">
+        <label for="qtdPorcao">Quantidade por Porção:</label>
+        <input type="number" id="qtdPorcao" name="qtdPorcao" [(ngModel)]="novaReceita.qtdPorcao" required />
+      </div>
+      
+      <div class="input-box">
+        <label for="indInedita">Indicação Inédita:</label>
+        <input type="number" id="indInedita" name="indInedita" [(ngModel)]="novaReceita.indInedita" required />
+      </div>
+      <button type="submit" class="btn">Criar Receita</button>
+    </form>
+  </div>
+</body>
+</html>
+   -->
+
+   <form [formGroup]="formulario" (ngSubmit)="atualizar()">
+    <div class="container">
+      <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+    <div mat-dialog-content>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input formControlName="nome" matInput readonly="true">
+      </mat-form-field>
+      <!-- <mat-form-field>
+        <mat-label>Cozinheiro</mat-label>
+        <input formControlName="idFuncionario" matInput>
+      </mat-form-field> -->
+      <mat-form-field>
+        <mat-label>Cozinheiro</mat-label>
+        <input
+          matInput
+          formControlName="idFuncionario"
+          [matAutocomplete]="autoFuncionario"
+          readonly="true"
+        >
+        <mat-autocomplete #autoFuncionario="matAutocomplete">
+          <mat-option *ngFor="let funcionario of funcionario" [value]="funcionario.nome">
+            {{ funcionario.nome }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Categoria</mat-label>
+        <input
+          matInput
+          formControlName="categoria"
+          [matAutocomplete]="autoCategoria"
+          readonly="true"
+        >
+        <mat-autocomplete #autoCategoria="matAutocomplete" (optionSelected)="selecionarCategoria($event)">
+          <mat-option *ngFor="let categoria of categoriasCompleto" [value]="categoria.idCategoria">
+            {{ categoria.descricao }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      
+      
+      
+      
+      <mat-form-field>
+        <mat-label>Modo de preparo</mat-label>
+        <textarea formControlName="modoPreparo" matInput readonly="true"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Quantidade por porção</mat-label>
+        <input formControlName="qtdPorcao" matInput readonly="true">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Indicação Inédita</mat-label>
+        <input formControlName="indInedita" matInput readonly="true">
+      </mat-form-field>
+      
+      
+    </div>
+    <div mat-dialog-actions>
+      <!-- <button mat-raised-button color="primary">Atualizar</button> -->
+      <!-- <button (click)="closePopup()" mat-raised-button color="warn">Close</button> -->
+      <button mat-raised-button [mat-dialog-close]="closemessage" color="warn">Voltar</button>
+    </div>
+    </div>
+  </form>

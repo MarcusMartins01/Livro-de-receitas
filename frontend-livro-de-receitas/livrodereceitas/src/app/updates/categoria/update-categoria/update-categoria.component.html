@@ -1,0 +1,17 @@
+<form [formGroup]="myForm" (ngSubmit)="atualizar()">
+    <div class="container">
+      <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+    <div mat-dialog-content>
+      <input formControlName="idCategoria" type="hidden">
+      <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <input formControlName="descricao" matInput>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary">Atualizar</button>
+      <!-- <button (click)="closePopup()" mat-raised-button color="warn">Close</button> -->
+      <button mat-raised-button [mat-dialog-close]="closemessage" color="warn">Cancel</button>
+    </div>
+    </div>
+  </form>

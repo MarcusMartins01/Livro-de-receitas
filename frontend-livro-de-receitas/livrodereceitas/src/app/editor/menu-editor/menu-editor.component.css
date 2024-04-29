@@ -1,0 +1,39 @@
+.container {
+    height: 100%;
+ }
+ 
+ .sidenav {
+    width: 15rem;
+    color: white;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(160,220,139,1) 0%);
+ }
+ 
+ .sidenav a {
+    color: white;
+ }
+ 
+ .sidenav i {
+    margin-right: .6rem;
+ }
+ 
+ .menu {
+    margin: 1rem 0 0 1rem;
+    color: white;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(160,220,139,1) 0%);
+ }
+ .white-text {
+   color: white;
+ }
+ .mat-toolbar {
+   background: rgba(160, 220, 139, 1);
+   color: white; /* Defina a cor do texto, se necessário */
+   
+ }
+ .fill-remaining-space {
+   flex: 1;
+ }
+ 
+ 
+
+
+  

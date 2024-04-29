@@ -1,0 +1,74 @@
+.conteiner {
+    width: calc(100% - 60px); 
+    margin-top: auto;
+    margin-left: 30px; /* Margem à esquerda de 10px */
+}
+
+
+.main-title {
+
+    margin-top: 3rem;
+    color: gray;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 2rem;
+}
+.mat-elevation-z8 {
+    width: 100%;
+    background-color: #d8d6d6; /* Fundo cinza para a tabela */
+    margin-top: 60px;
+
+  }
+  
+  /* Estilo para o cabeçalho da tabela */
+  .mat-header-cell {
+    font-weight: bold;
+    background-color: #ffffff;
+  }
+  /* Estilo básico para a tabela */
+
+  
+  /* Estilo para a coluna de imagem */
+  .mat-column-imagem img {
+    max-width: 50px; /* Ajuste a largura conforme necessário */
+    max-height: 50px; /* Ajuste a altura conforme necessário */
+  }
+  
+  /* Estilo para as linhas com fundo alternado */
+  .mat-row:nth-child(even) {
+    background-color: #fafafa; /* Fundo cinza claro para as linhas pares */
+  }
+  
+  /* Estilo para o botão de ação */
+  .mat-icon-button {
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0;
+  }
+  
+  /* Espaçamento entre os botões de ação */
+  .mat-icon-button + .mat-icon-button {
+    margin-left: 4px;
+  }
+/* Estilo para o ícone "lapis" nos botões de edição */
+.mat-icon-button.edit-button .mat-icon {
+    color: black; /* Cor preta para o ícone "lapis" */
+  }
+  
+  /* Estilo para o ícone "lixeira" nos botões de exclusão */
+  .mat-icon-button.delete-button .mat-icon {
+    color: black; /* Cor preta para o ícone "lixeira" */
+  }
+  .submit-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(160, 220, 139, 1);
+    border: none;
+    border-radius: 25px; /* Adiciona bordas arredondadas */
+    cursor: pointer;
+    margin-top: 5rem;
+  }

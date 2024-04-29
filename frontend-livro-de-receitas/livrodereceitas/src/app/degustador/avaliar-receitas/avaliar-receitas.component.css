@@ -1,0 +1,32 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* ou qualquer outra propriedade de alinhamento desejada */
+  }
+  
+  .card-class {
+    flex: 0 0 calc(60% - 20px); /* 30% para exibir 3 em uma linha e 20px de margem */
+    margin: 30px 10px; /* ou qualquer margem desejada */
+    box-sizing: border-box; /* para incluir a margem no cálculo da largura */
+    border-radius: 10px;
+  }
+  
+  mat-card {
+    width: 400px;
+  }
+  
+  
+  .main-title {
+  
+    margin-top: 3rem;
+    color: gray;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 2rem;
+  }
+  
+  img {
+    width: 100%;
+    height: 150px;
+  }
+  

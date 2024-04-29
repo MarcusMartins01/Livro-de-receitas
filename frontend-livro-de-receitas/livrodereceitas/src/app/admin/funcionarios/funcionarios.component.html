@@ -1,0 +1,78 @@
+<div class="conteiner">
+  <h1 class="main-title">Funcionários</h1>
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+      
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="idFuncionario">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Funcionario</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.idFuncionario }}</mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="nome">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Nome</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.nome }}</mat-cell>
+      </ng-container>
+
+      <!-- RG Column -->
+      <ng-container matColumnDef="rg">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Rg</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.rg }}</mat-cell>
+      </ng-container>
+
+      <!-- Salário Column -->
+      <ng-container matColumnDef="salario">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Salário</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.salario }}</mat-cell>
+      </ng-container>
+
+      <!-- Cargo Column -->
+      <ng-container matColumnDef="cargo">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Cargo</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.cargo.descricao }}</mat-cell>
+      </ng-container>
+
+      <!-- Nome Fantasia Column -->
+      <ng-container matColumnDef="nomeFantasia">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Nome Fantasia</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.nomeFantasia }}</mat-cell>
+      </ng-container>
+
+      <!-- Usuário Column -->
+      <ng-container matColumnDef="usuario">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Usuário</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.usuario }}</mat-cell>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">{{ funcionario.status }}</mat-cell>
+      </ng-container>
+
+      <!-- Ação Column -->
+      <ng-container matColumnDef="acao">
+        <mat-header-cell *matHeaderCellDef>Atualizar</mat-header-cell>
+        <mat-cell *matCellDef="let funcionario">
+          <button mat-icon-button class="edit-button" (click)="editRecipe(funcionario.idFuncionario)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+
+    <div class="paginator-container">
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+
+
+    
+  </div>
+
+  <button mat-raised-button class="submit-button" (click)="inserirFuncionario()">Inserir</button>
+</div>

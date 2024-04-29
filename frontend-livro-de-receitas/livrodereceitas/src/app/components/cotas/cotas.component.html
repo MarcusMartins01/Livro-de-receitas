@@ -1,0 +1,22 @@
+<h1 class="c-title"> Cotas</h1>
+
+<div class="calendar-container">
+    <div class="calendar">
+    <div class="month">
+      <button (click)="prevMonth()">Anterior</button>
+      <span id="currentMonth">{{ currentMonthName }} {{ currentYear }}</span>
+      <button (click)="nextMonth()">Próximo</button>
+    </div>
+    <div class="days-header">
+      <div *ngFor="let dayName of dayNames">{{ dayName }}</div>
+    </div>
+    <div class="days" id="calendarDays">
+      <div *ngFor="let day of calendarDays">{{ day }}</div>
+    </div> 
+    </div> 
+
+    <h1 class="main-title">Receitas enviadas em agosto: <input type="number" [(ngModel)]="recipesDone" /></h1>
+    <h1 class="main-title">Quantas faltam para a meta: <input type="number" [(ngModel)]="recipesDone" /></h1>
+
+
+  

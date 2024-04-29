@@ -1,0 +1,71 @@
+.conteiner {
+  width: calc(100% - 60px); 
+  margin-top: auto;
+  margin-left: 30px; /* Margem à esquerda de 10px */
+}
+
+
+.main-title {
+
+  margin-top: 3rem;
+  color: gray;
+  text-align: center;
+  font-weight: bold; 
+  font-size: 2rem;
+}
+.container {
+  margin: 20px; /* Adicione uma margem para desencostar dos cantos da página */
+}
+
+.mat-elevation-z8 {
+  width: calc(100% - 20px); /* Ajuste a largura da tabela para considerar a margem */
+  margin-bottom: 20px; /* Adicione uma margem inferior para separar a tabela do paginador */
+}
+
+.mat-paginator {
+  width: calc(100% - 20px); /* Ajuste a largura do paginador para considerar a margem */
+  margin-top: 20px; /* Adicione uma margem superior para separar o paginador do resto da página */
+}
+
+.submit-button {
+  margin-top: 20px; /* Adicione uma margem superior para separar o botão "Inserir" do paginador */
+}
+
+
+/* Estilo para o botão de ação */
+.mat-icon-button {
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+}
+
+/* Espaçamento entre os botões de ação */
+.mat-icon-button + .mat-icon-button {
+  margin-left: 4px;
+}
+/* Estilo para o ícone "lapis" nos botões de edição */
+.mat-icon-button.edit-button .mat-icon {
+  color: black; /* Cor preta para o ícone "lapis" */
+}
+
+/* Estilo para o ícone "lixeira" nos botões de exclusão */
+.mat-icon-button.delete-button .mat-icon {
+  color: black; /* Cor preta para o ícone "lixeira" */
+}
+.submit-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: #395ea3;
+  border: none;
+  border-radius: 25px; /* Adiciona bordas arredondadas */
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.submit-button:hover {
+  background-color: #2569e9;
+}

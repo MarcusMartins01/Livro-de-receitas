@@ -1,0 +1,65 @@
+
+<form [formGroup]="formulario" (ngSubmit)="criarReceita()">
+  <div class="container">
+    <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input formControlName="nome" matInput>
+    </mat-form-field>
+    <!-- <mat-form-field>
+      <mat-label>Cozinheiro</mat-label>
+      <input formControlName="idFuncionario" matInput>
+    </mat-form-field> -->
+    <mat-form-field>
+      <mat-label>Cozinheiro</mat-label>
+      <input
+        matInput 
+        formControlName="idFuncionario"
+        [matAutocomplete]="autoFuncionario"
+      >
+      <mat-autocomplete #autoFuncionario="matAutocomplete" (optionSelected)="selecionarFuncionario($event)">
+        <mat-option *ngFor="let funcionario of funcionario" [value]="funcionario.nome">
+          {{ funcionario.nome }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Categoria</mat-label>
+      <input
+        matInput
+        formControlName="categoria"
+        [matAutocomplete]="autoCategoria"
+      >
+      <mat-autocomplete #autoCategoria="matAutocomplete" (optionSelected)="selecionarCategoria($event)">
+        <mat-option *ngFor="let categoria of categoriasCompleto" [value]="categoria.idCategoria">
+          {{ categoria.descricao }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    
+    
+    
+    
+    <mat-form-field>
+      <mat-label>Modo de preparo</mat-label>
+      <textarea formControlName="modoPreparo" matInput></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Quantidade por porção</mat-label>
+      <input formControlName="qtdPorcao" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Indicação Inédita</mat-label>
+      <input formControlName="indInedita" matInput>
+    </mat-form-field>
+    
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary">Cadastrar</button>
+    <!-- <button (click)="closePopup()" mat-raised-button color="warn">Close</button> -->
+    <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button>
+  </div>
+  </div>
+</form>

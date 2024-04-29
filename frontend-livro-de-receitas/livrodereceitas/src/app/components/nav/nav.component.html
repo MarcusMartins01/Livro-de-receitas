@@ -1,0 +1,79 @@
+<mat-toolbar color="primary">
+  <span>Livro de Receitas</span>
+
+  <span class="fill-remaining-space"></span>
+
+  <mat-icon> account_circle </mat-icon>
+  <span> Cozinheiro </span>
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons"></i>
+        <span style="color: white;">Livro de Receitas</span>
+
+      </a>
+
+      <a mat-list-item (click)="toggleReceitas()" style="color: white;">
+        <i class="material-icons" style="color: white;">book</i>
+        <span style="color: white;">Receitas</span>
+      </a>
+
+      <mat-nav-list *ngIf="isReceitasOpen">
+        <a mat-list-item routerLink="Receitas" style="color: white;">
+          <i class="material-icons" style="color: white;">arrow_right</i>
+          <span style="color: white;"> Receitas </span>
+        </a>
+        <a mat-list-item routerLink="MinhasReceitas" style="color: white;">
+          <i class="material-icons" style="color: white;">arrow_right</i>
+          <span style="color: white;"> Minhas Receitas </span>
+        </a>
+
+
+      </mat-nav-list>
+
+
+      <a mat-list-item (click)="toggleReceitas()" style="color: white;">
+        <i class="material-icons" style="color: white;">check</i>
+        <span style="color: white;">Visualizar Cotas</span>
+      </a>
+
+      <mat-nav-list *ngIf="isReceitasOpen">
+        <a mat-list-item routerLink="VisualizarCotas" style="color: white;">
+          <i class="material-icons" style="color: white;">arrow_right</i>
+          <span style="color: white;"> Verificar Cotas </span>
+        </a>
+
+
+      </mat-nav-list>
+
+
+      <a mat-list-item (click)="togglePerfilUsuario()" style="color: white;">
+        <i class="material-icons" style="color: white;">account_box</i>
+        <span style="color: white;">Perfil Usuário</span>
+      </a>
+      <mat-nav-list *ngIf="isPerfilUsuarioOpen">
+        <a mat-list-item routerLink="PerfilUsuário" style="color: white;">
+          <i class="material-icons" style="color: white;">arrow_right</i>
+          <span style="color: white;">Atualizar Dados</span>
+        </a>
+        <a mat-list-item (click)="logout()" style="color: white;">
+          <i class="material-icons" style="color: white;">arrow_right</i>
+          <span style="color: white;">Sair</span>
+          
+        </a> 
+
+
+      </mat-nav-list>
+    </mat-nav-list>
+  </mat-drawer>
+  <div class="sidenav-content">
+    <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <router-outlet></router-outlet>
+
+  </div>
+</mat-drawer-container>

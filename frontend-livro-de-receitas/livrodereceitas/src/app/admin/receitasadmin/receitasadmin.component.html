@@ -1,0 +1,49 @@
+<div class="conteiner">
+  <h1 class="main-title">Receitas</h1>
+
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <ng-container matColumnDef="nome">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Nome</mat-header-cell>
+      <mat-cell *matCellDef="let receita">{{ receita.id && receita.id.nome }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="funcionario">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Cozinheiro</mat-header-cell>
+      <mat-cell *matCellDef="let receita">{{ receita.id && receita.id.funcionario.nome }}</mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="dataCriacao">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Data_Criação</mat-header-cell>
+      <mat-cell *matCellDef="let receita">{{ receita.dataCriacao }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="categoria">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Categoria</mat-header-cell>
+      <mat-cell *matCellDef="let receita">{{ receita.categoria.descricao }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="acao">
+      <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+      <mat-cell *matCellDef="let receita">
+        <button mat-icon-button class="edit-button" (click)="editRecipe(receita.id.nome, receita.id.funcionario.idFuncionario)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button class="delete-button" (click)="deleteRecipe(receita.id.nome, receita.id.funcionario.idFuncionario)">
+          <mat-icon>delete</mat-icon> 
+        </button>
+        <button mat-icon-button class="delete-button" (click)="visRecipe(receita.id.nome, receita.id.funcionario.idFuncionario)">
+          <mat-icon>visibility</mat-icon> 
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+
+  
+
+  <button mat-raised-button class="submit-button" (click)="inserirReceita()">Inserir</button>
+</div>
